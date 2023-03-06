@@ -135,7 +135,7 @@ Get location from the terminal i.e
 ```shell
 [mochawesome] Report HTML saved to C:\_git_repos\selenium-mocha\mochawesome-report\mochawesome.html
 ```
-## ...et voila!
+## ...et voila! :sunglasses:
 ![Screenshot](img/mochawesome.png)
 
 # Page Object Model Design Pattern
@@ -302,3 +302,33 @@ describe("Login page tests - POM, before() and after() hooks", function () {
 });
 
 ```
+### Run New Test
+```shell
+npm test test/login.pom.spec.js
+```
+### View Results in Mochawesome Report
+
+![Screenshot](img/mochawesome_pom.png)
+
+# Use this project
+### clone to your machine
+```shell
+git clone https://github.com/kiseta/selenium-mocha.git
+```
+### Install Dependencies
+open project in VSCode, run in Terminal
+```shell
+npm install
+```
+### Run tests
+```shell
+npm test
+```
+### Adding More Tests
+
+* Add locators and data to locators.js file
+* Add new page file i.e. FormPage.js and create FormPage Class in it
+* Create corresponding methods in new FormPage Class
+* Create new test file and build a sequence of steps and validations
+
+

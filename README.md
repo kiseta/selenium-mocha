@@ -1,6 +1,6 @@
 #  Selenium Mocha Framework Demo 
 
- <mark style="background-color: #DDF4FF">Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai Assertion Library and Mochawesome Reports</mark> :coffee:
+ <mark>Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai Assertion Library and Mochawesome Reports</mark> :coffee:
 
 
 ## Prerequisites

@@ -1,6 +1,6 @@
 #  Selenium Mocha Framework Demo 
 
- Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai for validations and Mochawesome Reports :coffee:
+ Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai Assertion Library and Mochawesome Reports :coffee:
 
 
 ## Prerequisites

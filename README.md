@@ -81,7 +81,6 @@ describe("Login page tests - Basic", () => {
 
   it("should allow a user to login with correct credentials", async () => {
     driver = await new Builder().forBrowser("chrome").build();
-
     await driver.get("https://the-internet.herokuapp.com/login");
     await driver.findElement(By.name("username")).sendKeys("tomsmith");
     await driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
@@ -92,6 +91,17 @@ describe("Login page tests - Basic", () => {
     await driver.quit();
   });
 
+  it("should display an error message for incorrect login", async () => {
+    driver = await new Builder().forBrowser("chrome").build();
+    await driver.get("https://the-internet.herokuapp.com/login");
+    await driver.findElement(By.name("username")).sendKeys("dummy");
+    await driver.findElement(By.name("password")).sendKeys("dummy");
+    await driver.findElement(By.css(".radius")).click();
+
+    const error = await driver.findElement(By.id("flash")).getText();
+    expect(error).to.contain("Your username is invalid!");
+    await driver.quit();
+  });
 });
 ```
 

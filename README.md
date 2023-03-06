@@ -1,11 +1,11 @@
 #  Selenium Mocha Framework Demo 
 
- Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai Assertion Library and Mochawesome Reports :coffee:
+ <mark style="background-color: #DDF4FF">Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai Assertion Library and Mochawesome Reports</mark> :coffee:
 
 
 ## Prerequisites
 * [Node.js](https://nodejs.org/) (with npm)
-* [Visual Studio Code]()
+* [Visual Studio Code](https://code.visualstudio.com/download)
 * Basic Knowledge of JavaScript 
 * Basic understanding of [Selenium WebDriver](https://selenium.dev)
 

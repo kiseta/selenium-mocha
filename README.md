@@ -1,4 +1,4 @@
-# Selenium Framework Test Automation Demo Project
+# Selenium Mocha Framework Demo
 ## Prerequisites
 * [Node.js](https://nodejs.org/) (with npm)
 * [Visual Studio Code]()
@@ -23,7 +23,7 @@ mkdir test
 Run the following commands in Terminal window in project directory 
 
 
-### Initialize Node.js Project (-y accepts all defaults silently)
+### Initialize Node.js Project
 ```shell
 npm init -y
 ```

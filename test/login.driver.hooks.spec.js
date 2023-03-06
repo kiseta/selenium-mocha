@@ -3,7 +3,7 @@
 
 const LoginPage = require("../pages/LoginPage");
 const { data } = require("../resources/locators");
-const { getDriver, quitDriver } = require("../driver");
+const { getDriver, quitDriver } = require("../resources/driver");
 
 describe("Login page tests - POM, before() and after() hooks, external driver file", function () {
   let driver;

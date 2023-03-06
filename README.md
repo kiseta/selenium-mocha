@@ -55,7 +55,7 @@ npm install mocha
 npm install mocha-selenium
 
 ```
-### Install Validation Framework
+### Install Assertion Library
 ```shell
 npm install chai
 ```

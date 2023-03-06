@@ -147,7 +147,7 @@ npm test test\login.spec.js
   npm test
   ```
 ## View Mochawesome Report 
-Get location from the terminal i.e 
+Get location from the terminal window and open it in the brower, for example: 
 ```shell
 [mochawesome] Report HTML saved to C:\_git_repos\selenium-mocha\mochawesome-report\mochawesome.html
 ```

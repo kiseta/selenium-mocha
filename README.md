@@ -9,6 +9,19 @@
 * Basic Knowledge of JavaScript 
 * Basic understanding of [Selenium WebDriver](https://selenium.dev)
 
+## Browser Drivers
+* Check the version of your Browser
+* Download compatible browser driver i.e [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+* Extract the chromedriver.exe to the local directory, i.e. C:/Tools
+* Add C:/Tools to the PATH variable (Environment Variable)
+* Verify the chromedriver.exe binary works by running the following command in a command prompt or terminal window:
+```shell
+chromedriver --version
+```
+
+![Screenshot](img/chromedriver_info.png)
+
+
 # Create Project Directory
 i.e. C:/_git_repos/selenium-mocha/>
 ```shell
@@ -35,17 +48,6 @@ npm init -y
 ### Install Selenium
 ```shell
 npm install selenium-webdriver
-```
-
-### Install Browser drivers
-
-#### Chrome
-```shell
-npm install chromedriver
-```
-#### Firefox (optional)
-```shell
-npm install geckodriver
 ```
 
 ### Install Testing Framework
@@ -111,7 +113,7 @@ describe("Login page tests - Basic", () => {
 
 # Run Test :heavy_check_mark:
 ```
-npx mocha login.spec.js
+npx mocha test\login.spec.js
 ```
 
 ![Screenshot](img/terminal_report.png)

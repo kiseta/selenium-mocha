@@ -1,7 +1,7 @@
 {
   "name": "selenium-mocha",
   "version": "1.0.0",
-  "description": "Selenium Testing Framework with, Mocha Test Framewrok and Allure Reporter",
+  "description": "Selenium WebDriver Page Object Model based Framework with Mocha Test Framework, Chai Assertion Library and Mochawesome Reporter",
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 10000 --reporter mochawesome"

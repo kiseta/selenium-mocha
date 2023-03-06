@@ -2,19 +2,12 @@
 // =========
 
 const { Builder } = require("selenium-webdriver");
-const { Options } = require("selenium-webdriver/chrome");
-const chromeOptions = new Options();
-chromeOptions.excludeSwitches("enable-logging");
 
 let driver;
 
 async function getDriver() {
   if (!driver) {
     driver = await new Builder().forBrowser("chrome").build();
-    // driver = await new webdriver.Builder()
-    // .forBrowser("chrome")
-    // .setChromeService(serviceBuilder)
-    // .setChromeOptions(chromeOptions).build();
   }
   return driver;
 }
@@ -26,9 +19,4 @@ async function quitDriver() {
   }
 }
 
-module.exports = {
-  getDriver,
-  quitDriver,
-};
-
-
+module.exports = {  getDriver,  quitDriver};

@@ -10,6 +10,9 @@ describe("Login page tests - Basic", () => {
   it("should allow a user to login with correct credentials", async () => {
     driver = await new Builder().forBrowser("chrome").build();
     await driver.get("https://the-internet.herokuapp.com/login");
+    const actualTitle = await driver.getTitle();
+    expect(actualTitle).to.equal("The Internet");
+    
     await driver.findElement(By.name("username")).sendKeys("tomsmith");
     await driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
     await driver.findElement(By.css(".radius")).click();

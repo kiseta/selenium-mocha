@@ -3,7 +3,7 @@
 
 const { By } = require("selenium-webdriver");
 const { expect } = require("chai");
-const { locators, data, xpath } = require("../resources/locators");
+const { locators, data } = require("../resources/locators");
 
 class LoginPage {
   constructor(driver) {
@@ -51,7 +51,6 @@ class LoginPage {
   async validatePageText(val) {
     const element = await this.driver.findElement(By.css(locators[val]));
     const txt = await element.getText();
-    console.log(`\n*** ${FormatVal(val)}: ${txt}`);
     const res = expect(txt).to.contain(data[val]);
     return res;
   }
@@ -61,11 +60,6 @@ class LoginPage {
   }
 }
 
-// common functions
-function FormatVal(input) {
-  const result = input.replace(/([a-z])([A-Z])/g, "$1 $2");
-  return result.charAt(0).toUpperCase() + result.slice(1);
-}
 
 
 module.exports = LoginPage;

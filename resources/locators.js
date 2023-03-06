@@ -12,19 +12,9 @@ const locators = {
   logoutButton: ".button.secondary.radius",
 };
 
-const xpath = {
-  username: '//input[@id="username"]',
-  password: '//input[@id="password"]',
-  submitButton: '//button[@type="submit"]',
-  errorMessage: '//div[@id="flash" and contains(@class, "error")]',
-  successMessage: '//div[@id="flash" and contains(@class, "success")]',
-  loginPageHeading: '//h2[contains(text(),"Login Page")]',
-  secureAreaPageHeading: '//h2[contains(text(),"Secure Area")]',
-  logoutButton: '//a[@class="button secondary radius"]',
-};
-
 const data = {
   baseUrl: "https://the-internet.herokuapp.com/login",
+  pageTitle: "The Internet",
   username: "tomsmith",
   password: "SuperSecretPassword!",
   loginPageHeading: "Login Page",
@@ -33,5 +23,5 @@ const data = {
   successMessage: "You logged into a secure area!",
 };
 
-module.exports = { locators, data, xpath };
+module.exports = { locators, data };
 

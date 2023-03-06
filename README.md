@@ -137,15 +137,168 @@ Get location from the terminal i.e
 ```
 ## ...et voila!
 ![Screenshot](img/mochawesome.png)
+
 # Page Object Model Design Pattern
 
 ## Create additional files/folder
+
+### Login Page Class file
+
 ```shell
 /pages/LoginPage.js
 ```
+Add the following content
+```js
+// LoginPage.js
+// ==========
+
+const { By } = require("selenium-webdriver");
+const { expect } = require("chai");
+const { locators, data } = require("../resources/locators");
+
+class LoginPage {
+  constructor(driver) {
+    this.driver = driver;
+  }
+
+  async goto() {
+    await this.driver.get(data.baseUrl);
+  }
+
+  async loginAs(username, password) {
+    await this.driver.findElement(By.css(locators.username)).sendKeys(username);
+    await this.driver.findElement(By.css(locators.password)).sendKeys(password);
+    await this.driver.findElement(By.css(locators.submitButton)).click();
+  }
+
+  async validatePageUrl(expectedUrl) {
+    const actualUrl = await this.driver.getCurrentUrl();
+    const res = expect(actualUrl).to.equal(expectedUrl);
+    return res;
+  }
+
+  async validatePageTitle(expectedTitle) {
+    const actualTitle = await this.driver.getTitle();
+    const res = expect(actualTitle).to.equal(expectedTitle);
+    return res;
+  }
+
+  async validateSuccessMessage() {
+    await this.validatePageText("successMessage");
+  }
+
+  async validateErrorMessage() {
+    await this.validatePageText("errorMessage");
+  }
+
+  async validateLoginPageHeading() {
+    await this.validatePageText("loginPageHeading");
+  }
+
+  async validateSecureAreaPageHeading() {
+    await this.validatePageText("secureAreaPageHeading");
+  }
+
+  async validatePageText(val) {
+    const element = await this.driver.findElement(By.css(locators[val]));
+    const txt = await element.getText();
+    const res = expect(txt).to.contain(data[val]);
+    return res;
+  }
+
+  async logout() {
+    await this.driver.findElement(By.css(locators.logoutButton)).click();
+  }
+}
+
+
+
+module.exports = LoginPage;
+```
+### Locators/Data file
+
 ```shell
 /resources/locators.js
 ```
+Add the following content
+```js
+// locators.js
+// ===========
+
+const locators = {
+  username: "#username",
+  password: "#password",
+  submitButton: 'button[type="submit"]',
+  errorMessage: "#flash.error",
+  successMessage:"#flash.success",
+  loginPageHeading: "h2",
+  secureAreaPageHeading: "h2",
+  logoutButton: ".button.secondary.radius",
+};
+
+const data = {
+  baseUrl: "https://the-internet.herokuapp.com/login",
+  pageTitle: "The Internet",
+  username: "tomsmith",
+  password: "SuperSecretPassword!",
+  loginPageHeading: "Login Page",
+  secureAreaPageHeading: "Secure Area",
+  errorMessage: "Your username is invalid!",
+  successMessage: "You logged into a secure area!",
+};
+
+module.exports = { locators, data };
+```
+### New Test File
+
 ```shell
 /test/login.pom.spec.js
+```
+Add the following code
+```js
+// login.pom.spec.js
+// page object model design pattern
+// ===================
+
+const { Builder } = require("selenium-webdriver");
+const LoginPage = require("../pages/LoginPage");
+const { data } = require("../resources/locators");
+
+describe("Login page tests - POM, before() and after() hooks", function () {
+  let driver;
+  let loginPage;
+
+  before(async function () {
+    driver = await new Builder().forBrowser("chrome").build();
+    loginPage = new LoginPage(driver);
+    await loginPage.goto();
+  });
+
+  after(async function () {
+    if (driver) {
+      await driver.quit();
+    }
+  });
+
+  describe("1. Correct username and password", function () {
+    it("1.1. should show the secure area heading and success message", async function () {
+      await loginPage.validatePageTitle(data.pageTitle);
+      await loginPage.validatePageUrl(data.baseUrl);
+      await loginPage.loginAs(data.username, data.password);
+      await loginPage.validateSecureAreaPageHeading();
+      await loginPage.validateSuccessMessage();
+      await loginPage.logout();
+      await loginPage.validateLoginPageHeading();
+    });
+  });
+
+  describe("2. Incorrect username and/or password", function () {
+    it("2.1 should stay on Login page and show an error message", async function () {
+      await loginPage.loginAs("dummy", "dummy");
+      await loginPage.validateErrorMessage();
+      await loginPage.validateLoginPageHeading();
+    });
+  });
+});
+
 ```

@@ -1,5 +1,5 @@
 // login.pom.spec.js
-// page object model design pattern 
+// page object model design pattern
 // ===================
 
 const { Builder } = require("selenium-webdriver");
@@ -24,6 +24,8 @@ describe("Login page tests - POM, before() and after() hooks", function () {
 
   describe("1. Correct username and password", function () {
     it("1.1. should show the secure area heading and success message", async function () {
+      await loginPage.validatePageTitle(data.pageTitle);
+      await loginPage.validatePageUrl(data.baseUrl);
       await loginPage.loginAs(data.username, data.password);
       await loginPage.validateSecureAreaPageHeading();
       await loginPage.validateSuccessMessage();
@@ -39,5 +41,4 @@ describe("Login page tests - POM, before() and after() hooks", function () {
       await loginPage.validateLoginPageHeading();
     });
   });
-
 });

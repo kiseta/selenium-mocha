@@ -100,6 +100,8 @@ describe("Login page tests - Basic", () => {
 npx mocha login.spec.js
 ```
 
+![Screenshot](img/terminal_report.png)
+
 ## Configure Test Run Command in package.json
 
 and specify default script timeout

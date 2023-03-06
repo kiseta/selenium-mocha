@@ -1,8 +1,7 @@
 #  Selenium Mocha Framework Demo 
 
-<div style="background-color: #DDF4FF; padding: 20px; border-radius: 5px;">
- Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai for validations and Mochawesome Reports
-</div>
+ Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai for validations and Mochawesome Reports :coffee:
+
 
 ## Prerequisites
 * [Node.js](https://nodejs.org/) (with npm)

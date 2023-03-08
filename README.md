@@ -157,6 +157,14 @@ Get location from the terminal window and open it in the brower, for example:
 ![Screenshot](img/mochawesome.png)
 
 # Page Object Model Design Pattern
+Page Object Model (POM) is a common design pattern used in QA Automation.
+
+* With POM Web pages are represented with corresponding Classes (i.e LoginPage Class, HomePage Class).
+* GUI Elements Locators are stored in a separate Repository file (i.e locators.js).
+* Interactions with the elements are done via the Class methods (functions).
+* Tests contain function calls to perform required actions.
+
+Using POM design pattern makes the code more maintainable, readable, reusable and optimized.
 
 ## Create additional files/folders
 

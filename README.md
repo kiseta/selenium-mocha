@@ -15,6 +15,7 @@
 * Extract the chromedriver.exe to the local directory, i.e. C:/Tools
 * Add C:/Tools to the PATH variable (Environment Variable)
 * Verify the chromedriver.exe binary works by running the following command in a command prompt or terminal window:
+
 ```shell
 chromedriver --version
 ```
@@ -24,6 +25,8 @@ chromedriver --version
 
 # Create Project Directory
 i.e. C:/_git_repos/selenium-mocha/>
+
+
 ```shell
 mkdir selenium-mocha
 ```
@@ -40,29 +43,29 @@ mkdir test
 Run the following commands in Terminal window in project directory 
 
 
-### Initialize Node.js Project
+### 1. Initialize Node.js Project
+
 ```shell
 npm init -y
 ```
 
-### Install Selenium
+### 2. Install Selenium
 ```shell
 npm install selenium-webdriver
 ```
 
-### Install Testing Framework
-```shell
-
+### 3. Install Testing Framework
+```bash
 npm install mocha
 npm install mocha-selenium
-
 ```
-### Install Assertion Library
+
+### 4. Install Assertion Library
 ```shell
 npm install chai
 ```
 
-### Install Reporting Framework
+### 5. Install Reporting Framework
 ```bash
 npm install --save-dev mochawesome
 ```

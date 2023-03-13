@@ -16,7 +16,7 @@ const { expect } = require("chai");
 // In the Mocha Test Framework, the "describe" function is used to define a test suite,
 // which is a collection of related test cases that test a specific feature or functionality of the code being tested.
 // The first argument to the "describe" function is a string that describes the name of the test suite.
-// The second argument is a function that contains Individual Test (it)
+// The second argument is a function that contains Individual Tests, hence the name (it - individual test)
 
 describe("Login page tests - Basic", function () {
   let driver; // Declare a variable to hold the WebDriver object.

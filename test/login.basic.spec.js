@@ -21,7 +21,7 @@ const { expect } = require("chai");
 describe("Login page tests - Basic", function () {
   let driver; // Declare a variable to hold the WebDriver object.
 
-  it("should allow a user to login with correct credentials", async function () {
+  it("01. Correct Login: should allow a user to login with correct credentials", async function () {
     // Create a new instance of a WebDriver object using Chrome browser and assigne it to the `driver` variable.
     driver = await new Builder().forBrowser("chrome").build();
 
@@ -47,7 +47,7 @@ describe("Login page tests - Basic", function () {
     await driver.quit();
   });
 
-  it("should display an error message for incorrect login", async function () {
+  it("02. Incorrect Login: should display an error message for incorrect login", async function () {
     driver = await new Builder().forBrowser("chrome").build();
     await driver.get("https://the-internet.herokuapp.com/login");
     await driver.findElement(By.name("username")).sendKeys("dummy");

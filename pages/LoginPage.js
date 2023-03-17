@@ -5,10 +5,14 @@ const { By } = require("selenium-webdriver");
 const { expect } = require("chai");
 const { locators, data } = require("../resources/locators");
 
+
 class LoginPage {
+
   constructor(driver) {
     this.driver = driver;
   }
+
+  // class methods 
 
   async goto() {
     await this.driver.get(data.baseUrl);
@@ -48,6 +52,12 @@ class LoginPage {
     await this.validatePageText("secureAreaPageHeading");
   }
 
+    async logout() {
+    await this.driver.findElement(By.css(locators.logoutButton)).click();
+  }
+
+  // common methods
+
   async validatePageText(val) {
     const element = await this.driver.findElement(By.css(locators[val]));
     const txt = await element.getText();
@@ -55,9 +65,6 @@ class LoginPage {
     return res;
   }
 
-  async logout() {
-    await this.driver.findElement(By.css(locators.logoutButton)).click();
-  }
 }
 
 

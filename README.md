@@ -4,7 +4,7 @@
 
 
 ## Prerequisites
-* [Node.js](https://nodejs.org/) (with npm)
+* :nodejs: [Node.js](https://nodejs.org/) (with npm)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * Basic Knowledge of JavaScript 
 * Basic understanding of [Selenium WebDriver](https://selenium.dev)

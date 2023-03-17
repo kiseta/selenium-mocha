@@ -115,7 +115,8 @@ describe("Login page tests - Basic", function() {
 ```
 
 # Run Test :heavy_check_mark:
-```
+In terminal window run the following command:
+```shell
 npx mocha test\login.spec.js
 ```
 

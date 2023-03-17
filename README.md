@@ -89,12 +89,57 @@ npm install --save-dev mochawesome
 
 # Create Selenium script
 
+## how to interact with different web elements using Selenium and JavaScript
+
+```js
+// Click a button
+driver.findElement(By.id("button-id")).click();
+
+// Type text into a text field
+driver.findElement(By.id("text-field-id")).sendKeys("Hello, World!");
+
+// Get the text content of a div
+var divText = driver.findElement(By.id("div-id")).getText();
+console.log(divText);
+
+// Get the text content of a span
+var spanText = driver.findElement(By.id("span-id")).getText();
+console.log(spanText);
+
+// Select an option from a select element
+new Select(driver.findElement(By.id("select-id"))).selectByValue("option-value");
+
+// Get the text content of an option
+var optionText = driver.findElement(By.id("option-id")).getText();
+console.log(optionText);
+
+// Check or uncheck a checkbox
+driver.findElement(By.id("checkbox-id")).click();
+
+```
+
+## using different locator strategies in Selenium with JavaScript
+```js
+// Click a button using ID
+driver.findElement(By.id("button-id")).click();
+
+// Click a button using class name
+driver.findElement(By.className("button-class")).click();
+
+// Click a button using name
+driver.findElement(By.name("button-name")).click();
+
+// Click a button using XPath
+driver.findElement(By.xpath("//button[text()='Click me']")).click();
+
+```
+
 ### Create new test in /test directory
 Note: Test name should end with either .**test**.js or .**spec**.js 
 ```
 login.spec.js
 ```
-### Add the following code
+### Create a basic linear script
 ```js
 // login.spec.js
 // ===================

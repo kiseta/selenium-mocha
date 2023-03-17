@@ -8,8 +8,25 @@
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * Basic Knowledge of JavaScript 
 * Basic understanding of [Selenium WebDriver](https://selenium.dev)
+* Basic knowledge of Command Line Interface (CLI) and running commands in Terminal 
+* Basic understanding of git version control and GitHub source control technologies
 
-## Browser Drivers
+
+## How Selenium Works with different browsers
+To use Selenium with different browsers, you need to download and install the appropriate web driver for each browser you want to automate. Here's where you can download the drivers for each browser:
+
+**Google Chrome**: The ChromeDriver can be downloaded from the official Selenium website at https://sites.google.com/a/chromium.org/chromedriver/downloads. You can download the driver version that matches your Chrome browser version.
+
+**Mozilla Firefox**: The GeckoDriver can be downloaded from the official Mozilla GitHub page at https://github.com/mozilla/geckodriver/releases. You can download the driver version that matches your Firefox browser version.
+
+**Microsoft Edge**: The EdgeDriver can be downloaded from the official Microsoft website at https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/. You can download the driver version that matches your Edge browser version.
+
+**Safari**: The SafariDriver is built into the Safari browser and is enabled through the Develop menu. To enable the Develop menu, go to Safari Preferences -> Advanced and check "Show Develop menu in menu bar". Then, go to the Develop menu and select "Allow Remote Automation".
+
+Once you have downloaded and installed the appropriate driver for each browser, you can use Selenium to automate the interaction with the browser in your test scripts.
+
+## Dowload Browser Drivers
+
 * Check the version of your Browser
 * Download compatible browser driver i.e [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 * Extract the chromedriver.exe to the local directory, i.e. C:/Tools

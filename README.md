@@ -9,7 +9,7 @@
 * Basic Knowledge of JavaScript 
 * Basic understanding of [Selenium WebDriver](https://selenium.dev)
 * Basic knowledge of Command Line Interface (CLI) and running commands in Terminal 
-* Basic understanding of git version control and GitHub source control technologies
+* Basic understanding of git version control and :octocat: GitHub source control technologies
 
 
 ## How Selenium Works with different browsers

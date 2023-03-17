@@ -4,7 +4,7 @@
 
 
 ## Prerequisites
-* :nodejs: [Node.js](https://nodejs.org/) (with npm)
+* [Node.js](https://nodejs.org/) (with npm)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * Basic Knowledge of JavaScript 
 * Basic understanding of [Selenium WebDriver](https://selenium.dev)
@@ -25,7 +25,7 @@ To use Selenium with different browsers, you need to download and install the ap
 
 Once you have downloaded and installed the appropriate driver for each browser, you can use Selenium to automate the interaction with the browser in your test scripts.
 
-## Dowload Browser Drivers
+## Install Browser Drivers
 
 * Check the version of your Browser
 * Download compatible browser driver i.e [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)

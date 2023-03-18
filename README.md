@@ -119,20 +119,28 @@ driver.findElement(By.id("checkbox-id")).click();
 ```
 
 ## Locator strategies in Selenium with JavaScript
+### ID
 ```js
 // Click a button using ID
 driver.findElement(By.id("button-id")).click();
-
+```
+### Class Name
+```js
 // Click a button using class name
 driver.findElement(By.className("button-class")).click();
-
+```
+### Name
+```js
 // Click a button using name
 driver.findElement(By.name("button-name")).click();
-
+```
+### Xpath
+```js
 // Click a button using XPath
 driver.findElement(By.xpath("//button[text()='Click me']")).click();
 
 ```
+
 
 ### Create new test in /test directory
 Note: Test name should end with either .**test**.js or .**spec**.js 
@@ -140,6 +148,13 @@ Note: Test name should end with either .**test**.js or .**spec**.js
 login.spec.js
 ```
 ### Create a basic linear script
+Developing an automated script using Selenium and JavaScript involves two phases: 
+- linear script development and 
+- page object model (POM) based script development. 
+
+In the linear script development phase, we develop the script by hardcoding the locators and data values directly into the script. This approach is quick and easy to implement but can be difficult to maintain and update in the long run.
+
+Once the linear script is developed, we can refactor it into a more efficient and maintainable page object model (POM) based script. In the POM based script development phase, we separate the locators and actions from the script into separate page object files.
 ```js
 // login.spec.js
 // ===================

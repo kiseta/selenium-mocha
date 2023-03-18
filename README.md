@@ -446,4 +446,8 @@ npm test
 * Create corresponding methods in new FormPage Class
 * Create new test file and build a sequence of steps and validations
 
+## Troubleshooting
 
+When creating methods in your class file make sure each method (function) name starts with **async**, each step that interacts with application starts with the keywrod **await** and when using the driver refer to it using **this.driver** notation
+
+![Screenshot](img/troubleshooting.png)

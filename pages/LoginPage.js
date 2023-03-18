@@ -64,9 +64,6 @@ class LoginPage {
     const res = expect(txt).to.contain(data[val]);
     return res;
   }
-
 }
-
-
 
 module.exports = LoginPage;

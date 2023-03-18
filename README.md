@@ -89,7 +89,7 @@ npm install --save-dev mochawesome
 
 # Create Selenium script
 
-## how to interact with different web elements using Selenium and JavaScript
+## Common interactions with web elements using Selenium and JavaScript
 
 ```js
 // Click a button
@@ -118,7 +118,7 @@ driver.findElement(By.id("checkbox-id")).click();
 
 ```
 
-## using different locator strategies in Selenium with JavaScript
+## Locator strategies in Selenium with JavaScript
 ```js
 // Click a button using ID
 driver.findElement(By.id("button-id")).click();

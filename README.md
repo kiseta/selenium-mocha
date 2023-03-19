@@ -79,8 +79,15 @@ npm install selenium-webdriver
 ```
 
 ### 3. Install Testing Framework
+
+The "***npm install mocha***" command installs the Mocha test framework as a development dependency for your project. Mocha is a popular JavaScript test framework that is used to run automated tests for web applications.
+
+The "***npm install mocha-selenium***" command installs the ***Mocha Selenium adapter*** as a development dependency for your project. The Mocha Selenium adapter is a library that allows you to run Selenium tests with Mocha. 
+
 ```shell
 npm install mocha
+```
+```
 npm install mocha-selenium
 ```
 
@@ -100,28 +107,27 @@ npm install --save-dev mochawesome
 
 ```js
 // Click a button
-driver.findElement(By.id("button-id")).click();
+await driver.findElement(By.id("button-id")).click();
 
 // Type text into a text field
-driver.findElement(By.id("text-field-id")).sendKeys("Hello, World!");
+await driver.findElement(By.id("text-field-id")).sendKeys("Hello, World!");
 
-// Get the text content of a div
-var divText = driver.findElement(By.id("div-id")).getText();
+// Get the text content of an element (div)
+var divText = await driver.findElement(By.id("div-id")).getText();
 console.log(divText);
 
-// Get the text content of a span
-var spanText = driver.findElement(By.id("span-id")).getText();
-console.log(spanText);
-
 // Select an option from a select element
-new Select(driver.findElement(By.id("select-id"))).selectByValue("option-value");
-
-// Get the text content of an option
-var optionText = driver.findElement(By.id("option-id")).getText();
-console.log(optionText);
+await new Select(driver.findElement(By.id("select-id"))).selectByValue("option-value");
 
 // Check or uncheck a checkbox
-driver.findElement(By.id("checkbox-id")).click();
+await driver.findElement(By.id("checkbox-id")).click();
+
+// Enter text and press a keyboard key
+// add the following import to the top of the file
+const { Key } = require("selenium-webdriver");
+
+await driver.findElement(By.name("searchBox")).sendKeys("Selenium WebDriver", Key.RETURN);
+await driver.findElement(By.css("#my-input")).sendKeys("text to enter", Key.TAB);
 
 ```
 

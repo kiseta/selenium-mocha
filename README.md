@@ -135,22 +135,22 @@ await driver.findElement(By.css("#my-input")).sendKeys("text to enter", Key.TAB)
 #### ID
 ```js
 // Click a button using ID
-driver.findElement(By.id("button-id")).click();
+await driver.findElement(By.id("button-id")).click();
 ```
 #### Class Name
 ```js
 // Click a button using class name
-driver.findElement(By.className("button-class")).click();
+await driver.findElement(By.className("button-class")).click();
 ```
 #### Name
 ```js
 // Click a button using name
-driver.findElement(By.name("button-name")).click();
+await driver.findElement(By.name("button-name")).click();
 ```
 #### Xpath
 ```js
 // Click a button using XPath
-driver.findElement(By.xpath("//button[text()='Click me']")).click();
+await driver.findElement(By.xpath("//button[text()='Click me']")).click();
 
 ```
 
@@ -168,6 +168,8 @@ Developing an automated script using Selenium and JavaScript involves two phases
 In the linear script development phase, we develop the script by hardcoding the locators and data values directly into the script. This approach is quick and easy to implement but can be difficult to maintain and update in the long run.
 
 Once the linear script is developed, we can refactor it into a more efficient and maintainable page object model (POM) based script. In the POM based script development phase, we separate the locators and actions from the script into separate page object files.
+
+
 ```js
 // login.spec.js
 // ===================
@@ -460,6 +462,20 @@ npm test
 * Add new page file i.e. FormPage.js and create FormPage Class in it
 * Create corresponding methods in new FormPage Class
 * Create new test file and build a sequence of steps and validations
+
+## About using `async` and `await` keywords
+
+The `async` and `await` keywords are used to make WebDriver API calls that return promises, such as driver.findElement and driver.get, and wait for them to complete before continuing execution of the test. 
+
+By using `await` with these calls, we ensure that the test doesn't continue until the browser has finished loading the page or found the element we are looking for, and we can then interact with the page in a predictable way.
+
+If you'd like to learn more about async and await in JavaScript, there are many resources available online that can help you deepen your understanding. Here are a few good places to start:
+
+- Mozilla Developer Network (MDN) has a great guide to async/await, which covers the basics of how they work and includes code examples. You can find it here: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
+
+- The JavaScript.info website has an excellent in-depth tutorial on async/await, which covers topics like error handling, sequential and parallel execution, and more advanced concepts. You can find it here: https://javascript.info/async-await
+
+- The Node.js documentation also has a section on async/await, which covers how to use them with Node.js APIs and modules. You can find it here: https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/#promises
 
 ## Troubleshooting
 

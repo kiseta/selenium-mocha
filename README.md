@@ -214,9 +214,11 @@ npx mocha test\login.spec.js
 
 ![Screenshot](img/terminal_report.png)
 
-## Configure Test Run Command in package.json
+## Configure Test Run Command
+and specify default script timeout.
 
-and specify default script timeout
+Open **package.json** file and update **"scripts"** section as follows:
+
 ```json
   "scripts": {
     "test": "mocha --timeout 10000"

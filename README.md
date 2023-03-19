@@ -27,10 +27,10 @@ Once you have downloaded and installed the appropriate driver for each browser, 
 
 ## Install Browser Drivers
 
-* Check the version of your Browser
-* Download compatible browser driver i.e [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
-* Extract the chromedriver.exe to the local directory, i.e. C:/Tools
-* Add C:/Tools to the PATH variable (Environment Variable)
+* Check the version of your Browser.
+* Download compatible browser driver i.e [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads).
+* Extract the chromedriver.exe to the local directory, i.e. C:/Tools.
+* Add C:/Tools to the PATH variable (Environment Variable) - this step may require restart.
 * Verify the chromedriver.exe binary works by running the following command in a command prompt or terminal window:
 
 ```shell
@@ -44,29 +44,26 @@ chromedriver --version
 
 
 ## Create Project Directory
+
 `i.e. C:/_git_repos/selenium-mocha/>`
 
- ==This step can be done via file explorer or Terminal Window `mkdir` command (in Command Prompt in Windows, for example)== 
+This step can be done via file explorer or Terminal Window (in Command Prompt in Windows, for example)
 
 ```shell
 mkdir selenium-mocha
 ```
 
-## Go to Project directory
-After you created a directory, you can open it in Visual Studio Code (VSCode) and run the rest of the commands via Terminal Window in VSCode.
-
-```shell
-cd selenium-mocha
-```
 ## Create /test folder
 ```shell
+cd selenium-mocha
 mkdir test
 ```
 
 
 # Install Dependencies
-Start VSCode and open prject directory
-Run the following commands in Terminal window
+Start VSCode and open project folder.
+
+Run the following commands in Terminal window:
 
 ![Screenshot](img/terminal_command.png)
 

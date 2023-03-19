@@ -469,7 +469,7 @@ The `async` and `await` keywords are used to make WebDriver API calls that retur
 
 By using `await` with these calls, we ensure that the test doesn't continue until the browser has finished loading the page or found the element we are looking for, and we can then interact with the page in a predictable way.
 
-If you'd like to learn more about async and await in JavaScript, there are many resources available online that can help you deepen your understanding. Here are a few good places to start:
+### Additional Resources:
 
 - Mozilla Developer Network (MDN) has a great guide to async/await, which covers the basics of how they work and includes code examples. You can find it here: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
 

@@ -96,7 +96,7 @@ npm install --save-dev mochawesome
 
 # Create Selenium script
 
-## Common interactions with web elements using Selenium and JavaScript
+### Common interactions with web elements using Selenium and JavaScript
 
 ```js
 // Click a button
@@ -125,23 +125,23 @@ driver.findElement(By.id("checkbox-id")).click();
 
 ```
 
-## Locator strategies in Selenium with JavaScript
-### ID
+### Locator strategies in Selenium with JavaScript
+#### ID
 ```js
 // Click a button using ID
 driver.findElement(By.id("button-id")).click();
 ```
-### Class Name
+#### Class Name
 ```js
 // Click a button using class name
 driver.findElement(By.className("button-class")).click();
 ```
-### Name
+#### Name
 ```js
 // Click a button using name
 driver.findElement(By.name("button-name")).click();
 ```
-### Xpath
+#### Xpath
 ```js
 // Click a button using XPath
 driver.findElement(By.xpath("//button[text()='Click me']")).click();
@@ -149,12 +149,12 @@ driver.findElement(By.xpath("//button[text()='Click me']")).click();
 ```
 
 
-### Create new test in /test directory
+## Create new test in /test directory
 Note: Test name should end with either .**test**.js or .**spec**.js 
 ```
 login.spec.js
 ```
-### Create a basic linear script
+## Create a basic linear script
 Developing an automated script using Selenium and JavaScript involves two phases: 
 - linear script development and 
 - page object model (POM) based script development. 
@@ -225,7 +225,9 @@ run specific test
 npm test test\login.spec.js
 ```
 # Using Mochawesome Reporter
-## Update test run command in package.json
+## Update test run command
+
+Open **package.json** file and update **"scripts"** section as follows
 
 ```json
   "scripts": {

@@ -39,15 +39,22 @@ chromedriver --version
 
 ![Screenshot](img/chromedriver_info.png)
 
+# Creating Selenium Framework
 
-# Create Project Directory
-i.e. C:/_git_repos/selenium-mocha/>
 
+
+## Create Project Directory
+`i.e. C:/_git_repos/selenium-mocha/>`
+
+ ==This step can be done via file explorer or Terminal Window `mkdir` command (in Command Prompt in Windows, for example)== 
 
 ```shell
 mkdir selenium-mocha
 ```
+
 ## Go to Project directory
+After you created a directory, you can open it in Visual Studio Code (VSCode) and run the rest of the commands via Terminal Window in VSCode.
+
 ```shell
 cd selenium-mocha
 ```
@@ -56,9 +63,12 @@ cd selenium-mocha
 mkdir test
 ```
 
-# Install Dependencies
-Run the following commands in Terminal window in project directory 
 
+# Install Dependencies
+Start VSCode and open prject directory
+Run the following commands in Terminal window
+
+![Screenshot](img/terminal_command.png)
 
 ### 1. Initialize Node.js Project
 

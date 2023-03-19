@@ -448,6 +448,8 @@ npm test
 
 ## Troubleshooting
 
-When creating methods in your class file make sure each method (function) name starts with **async**, each step that interacts with application starts with the keywrod **await** and when using the driver refer to it using **this.driver** notation
+When creating methods in your class file make sure each method (function) name starts with **async** keyword, each step that interacts with application starts with the  **await** keyword and when using the driver in class file refer to it using **this.driver** notation
 
 ![Screenshot](img/troubleshooting.png)
+
+

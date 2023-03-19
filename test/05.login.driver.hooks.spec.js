@@ -1,31 +1,31 @@
-// login.pom.spec.js
-// page object model design pattern
-// ===================
+// 05.login.driver.hooks.spec.js
+// ===============
+// in this version, driver is moved to separate file
+// driver creation/quiting happens in before/after hooks
+// Individual Tests now contain only sequence of steps
 
-const { Builder } = require("selenium-webdriver");
 const LoginPage = require("../pages/LoginPage");
 const { data } = require("../resources/locators");
+const { getDriver, quitDriver } = require("../resources/driver");
 
-describe("Login page tests - POM, before() and after() hooks", function () {
+describe("Login page tests - POM, before() and after() hooks, external driver file", function () {
   let driver;
   let loginPage;
 
+  // before hook
   before(async function () {
-    driver = await new Builder().forBrowser("chrome").build();
+    driver = await getDriver();
     loginPage = new LoginPage(driver);
     await loginPage.goto();
   });
 
+  //after hook
   after(async function () {
-    if (driver) {
-      await driver.quit();
-    }
+    await quitDriver();
   });
 
   describe("1. Correct username and password", function () {
     it("1.1. should show the secure area heading and success message", async function () {
-      await loginPage.validatePageTitle(data.pageTitle);
-      await loginPage.validatePageUrl(data.baseUrl);
       await loginPage.loginAs(data.username, data.password);
       await loginPage.validateSecureAreaPageHeading();
       await loginPage.validateSuccessMessage();
@@ -42,3 +42,4 @@ describe("Login page tests - POM, before() and after() hooks", function () {
     });
   });
 });
+

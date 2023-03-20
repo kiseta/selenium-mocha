@@ -178,6 +178,7 @@ const { Builder, By } = require("selenium-webdriver");
 const { expect } = require("chai");
 
 describe("Login page tests - Basic", function() {
+  this.timeout(50000);
   let driver;
 
   it("should allow a user to login with correct credentials", async function() {

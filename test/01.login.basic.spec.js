@@ -19,6 +19,7 @@ const { expect } = require("chai");
 // The second argument is a function that contains Individual Tests, hence the name (it - individual test)
 
 describe("Login page tests - Basic", function () {
+  this.timeout(50000); // Set timeout
   let driver; // Declare a variable to hold the WebDriver object.
 
   it("01. Correct Login: should allow a user to login with correct credentials", async function () {

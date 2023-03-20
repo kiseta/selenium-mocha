@@ -464,6 +464,11 @@ npm test
 * Add new page file i.e. FormPage.js and create FormPage Class in it
 * Create corresponding methods in new FormPage Class
 * Create new test file and build a sequence of steps and validations
+* Run your tests!
+
+Good luck!  :rocket: :crossed_fingers: :four_leaf_clover: :thumbsup:
+
+<hr />
 
 ## :bulb: About using `async` and `await` keywords
 
@@ -484,5 +489,4 @@ By using `await` with these calls, we ensure that the test doesn't continue unti
 When creating methods in your class file make sure each method (function) name starts with **async** keyword, each step that interacts with application starts with the  **await** keyword and when using the driver in class file refer to it using **this.driver** notation
 
 ![Screenshot](img/troubleshooting.png)
-
 

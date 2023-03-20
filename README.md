@@ -156,7 +156,7 @@ await driver.findElement(By.xpath("//button[text()='Click me']")).click();
 
 
 ## Create new test in /test directory
-Note: Test name should end with either .**test**.js or .**spec**.js 
+:bulb: Test name should end with either .**test**.js or .**spec**.js 
 ```
 login.spec.js
 ```
@@ -465,7 +465,7 @@ npm test
 * Create corresponding methods in new FormPage Class
 * Create new test file and build a sequence of steps and validations
 
-## About using `async` and `await` keywords
+## :bulb: About using `async` and `await` keywords
 
 The `async` and `await` keywords are used to make WebDriver API calls that return promises, such as driver.findElement and driver.get, and wait for them to complete before continuing execution of the test. 
 
@@ -479,7 +479,7 @@ By using `await` with these calls, we ensure that the test doesn't continue unti
 
 - The Node.js documentation also has a section on async/await, which covers how to use them with Node.js APIs and modules. You can find it here: https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/#promises
 
-## Troubleshooting
+## :crystal_ball: Troubleshooting
 
 When creating methods in your class file make sure each method (function) name starts with **async** keyword, each step that interacts with application starts with the  **await** keyword and when using the driver in class file refer to it using **this.driver** notation
 

@@ -129,6 +129,17 @@ const { Key } = require("selenium-webdriver");
 await driver.findElement(By.name("searchBox")).sendKeys("Selenium WebDriver", Key.RETURN);
 await driver.findElement(By.css("#my-input")).sendKeys("text to enter", Key.TAB);
 
+// wait for element before interracting with it
+await this.driver.wait(until.elementLocated(By.name('username')), 10000);
+
+// add assertion, get text from element
+// add the following import to the top of the file. NOTE:'assert' is a built-in module in Node.js
+const assert = require('assert');
+
+const message = await driver.findElement(By.id('flash')).getText();
+assert.strictEqual(message.includes('You logged into a secure area!'), true);
+
+
 ```
 
 ### Locator strategies in Selenium with JavaScript

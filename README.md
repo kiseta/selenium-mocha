@@ -2,13 +2,13 @@
 
  <mark>Page Object Model based Test Automation Framework with Selenium WebDriver, Mocha Testing Framework, Chai Assertion Library and Mochawesome Reports</mark> :coffee:
  
-## About This Project
+## Intro
 
 Software testing is an essential part of the Software Development Life Cycle (SDLC), and much of it can be automated to improve efficiency, consistency, and reliability.
 
-Automated testing requires first implementing a test automation framework that brings together automation tools, scripting languages, testing and reporting frameworks, and a consistent approach to organizing and executing tests.
+Automated testing requires first implementing a **test automation framework** that brings together automation tools, scripting languages, testing and reporting frameworks, and a consistent approach to developing and executing automated tests.
 
-Selenium Mocha Framework Demo is a hands-on, step-by-step learning project demonstrating how to build a web UI test automation framework from scratch using JavaScript as the scripting language, Selenium WebDriver for browser automation, Mocha as the test runner, Chai for assertions, and Mochawesome for test reporting, following the Page Object Model (POM) design pattern.
+Selenium Mocha Framework Demo is a **hands-on, step-by-step learning project** demonstrating how to build a web UI test automation framework from scratch using JavaScript as the scripting language, Selenium WebDriver for browser automation, Mocha as the test runner, Chai for assertions, and Mochawesome for test reporting, following the Page Object Model (POM) design pattern.
 
 ## Prerequisites
 * [Node.js](https://nodejs.org/) (with npm)
